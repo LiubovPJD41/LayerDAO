@@ -1,22 +1,27 @@
 package ru.Polyaeva.LayerDAO.entities;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
 
-@Data
+@Entity
+@Table(name = "orders")
 public class Order {
-    private int id;
-    private Date date;
-    private int customerId;
-    private String productName;
-    private int amount;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    public Long id;
 
-    public Order(int id, Date date, int customerId, String productName, int amount) {
-        this.id = id;
-        this.date = date;
-        this.customerId = customerId;
-        this.productName = productName;
-        this.amount = amount;
-    }
+    @Column
+    public Date date;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id")
+    public Customer customer;
+
+    @Column
+    public String productName;
+
+    @Column
+    public int amount;
 }

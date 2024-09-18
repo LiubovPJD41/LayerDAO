@@ -11,12 +11,12 @@ values ('Pavel', 'Mashkov', 30, '9104578965');
 
 
 insert into orders (date, customer_id, product_name, amount)
-values ('2022-08-23', 1, 'Chairs', 25);
+values ('01.01.2022', 1, 'Chairs', 25);
 insert into orders (date, customer_id, product_name, amount)
-values ('2022-09-06', 2, 'Table', 3);
+values ('06.09.2022', 2, 'Table', 3);
 insert into orders (date, customer_id, product_name, amount)
-values ('2022-10-10', 3, 'Sofa',1);
+values ('10.10.2022', 3, 'Sofa',1);
 insert into orders (date, customer_id, product_name, amount)
-values ('2022-12-15', 4, 'Bed', 2);
+values ('15.12.2022', 4, 'Bed', 2);
 insert into orders (date, customer_id, product_name, amount)
-values ('2023-01-01', 5, 'Door', 6);
+values ('01.01.2023', 5, 'Door', 6);

@@ -5,7 +5,7 @@ create table if not exists customers
     surname      character varying(30) not null,
     age          int                   not null,
     phone_number character varying(10) not null
-    );
+);
 
 create table if not exists orders
 (
@@ -15,4 +15,4 @@ create table if not exists orders
     product_name character varying(50) not null,
     amount       int                   not null,
     foreign key (customer_id) references customers (id)
-    );
+);

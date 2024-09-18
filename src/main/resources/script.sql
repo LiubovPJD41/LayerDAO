@@ -1,4 +1,4 @@
-select product_name
+select orders.*
 from customers
          join orders on customers.id = orders.customer_id
-where product_name = :name;
+where name = :name;
